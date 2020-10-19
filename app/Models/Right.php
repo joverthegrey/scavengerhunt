@@ -6,9 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+/**
+ * Class Right
+ * @package App\Models
+ *
+ * @property string $name
+ */
 class Right extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name'];
 
     /**
      * Return the roles which have this right
