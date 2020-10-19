@@ -13,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // rights
+        $rightSeeder = new RightSeeder();
+        $rightSeeder->run();
+
+        // roles and roles right pivot
+        $roleSeeder = new RoleSeeder();
+        $roleSeeder->run();
     }
 }
